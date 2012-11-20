@@ -16,7 +16,14 @@ It's often very easy to get lost in a sea of console.log calls. Sometimes you fo
 ```
 
 ### Sample Call:
-![alt text](http://jaymoretti.com/logger/call.png "Sample Call")
+```javascript
+	var object = {
+		prop1 : [0, 1, 2, 3, 4],
+		prop2 : "This is a String",
+		prop3 : {"prop1" : "meh"}
+	};
+	console.log(object.prop1, object.prop2, object.prop3);
+```
 
 ### Output: 
 ![alt text](http://jaymoretti.com/logger/output.png "Sample Output")
