@@ -28,6 +28,9 @@ It's often very easy to get lost in a sea of console.log calls. Sometimes you fo
 ### Output: 
 ![alt text](http://jaymoretti.com/logger/output.png "Sample Output")
 
+### Build:
+Builds are created by uglyfying and merging /src/libs/stacktrace.js and /src/utils/log/log.js together using [Uglify-js2](https://github.com/mishoo/UglifyJS2)
+
 ### Licensing 
 published under the MIT license
 

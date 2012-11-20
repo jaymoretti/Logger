@@ -25,7 +25,6 @@ function Log(){
 
 			//if the call doesn't come from a function, it will just give us the file;
 			var _file = "";
-			__log(__console, _stack);
 			if(_stack.indexOf("@") < 0)
 				_file = _stack.split(" ")[1].substring(1,_stack.split(" ")[1].length-1);
 			else
