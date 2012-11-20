@@ -2,7 +2,7 @@
 ## console.log++
 _by [Jay Moretti](http://madeinhaus.com)_
 
-It's often very easy to get lost in a sea of console.log calls. Sometimes you forget to clear them before sending the project to production.  
+It's often very easy to get lost in a sea of console.log calls. Sometimes you forget to clear them before sending the project to production. Sometimes you need more than a simple output. That's the reason why this console.log extension exists.
 
 ### Basic Usage: 
 ```javascript
