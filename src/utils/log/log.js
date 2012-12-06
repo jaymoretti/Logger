@@ -1,12 +1,10 @@
 /* log(params) polyfill by Jay Moretti */
 // returns: [ 18/11/2012 :: 01:52:22:322 :: CLASS :: #LINE] [ARGUMENTS]
-var __log = console.log;
-var __console = console;
-var logger = new Log();
+var __log = window.console.log;
+window.logger = new Log();
 console.log = logger.log;
 
 function Log(){
-	var version = "0.0.1";
 	var _isIOS = navigator.userAgent.toLowerCase().match(/(iphone|ipod|iPad)/);
 	var _debugOn = true;
 	var _isCompiled = false;
@@ -26,9 +24,11 @@ function Log(){
 			//if the call doesn't come from a function, it will just give us the file;
 			var _file = "";
 			if(_stack.indexOf("@") < 0)
+			{
 				_file = _stack.split(" ")[1].substring(1,_stack.split(" ")[1].length-1);
-			else
+			} else {
 				_file = _stack.split("@")[1];
+			}
 			
 			// for calls done via console, it won't return a scope.
 			var _function,
@@ -50,15 +50,15 @@ function Log(){
 			}
 
 			var _now = new Date();
-			var _stamp = "[ " + _now.getDate() + "/" + (_now.getMonth() + 1) + "/" + _now.getFullYear() + " :: " + (_now.getHours().toString().length == 1 ? "0"+_now.getHours() : _now.getHours() ) + ":" + (_now.getMinutes().toString().length == 1 ? "0"+_now.getMinutes() : _now.getMinutes()) + ":"+ _now.getSeconds() + ":" + _now.getMilliseconds() + " :: " + (_isCompiled ? _function : _class) + " :: #" + _line + " ]";
+			var _stamp = "[ " + _now.getDate() + "/" + (_now.getMonth() + 1) + "/" + _now.getFullYear() + " :: " + (_now.getHours().toString().length == 1 ? "0"+_now.getHours() : _now.getHours() ) + ":" + (_now.getMinutes().toString().length == 1 ? "0"+_now.getMinutes() : _now.getMinutes()) + ":" + _now.getSeconds() + ":" + _now.getMilliseconds() + " :: " + (_isCompiled ? _function : _class) + " :: #" + _line + " ]";
 			if(__log)
 			{
 				if(!_isIOS)
 				{
-					__log.call(__console, _stamp, arguments);
+					__log.call(window.console, _stamp, arguments);
 				} else {
 					for (var i = 0; i < arguments.length; i++){
-						__log.call(__console, _stamp, arguments);
+						__log.call(window.console, _stamp, arguments);
 					}
 				}
 			} else {
