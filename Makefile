@@ -5,7 +5,7 @@ minified=./log.min.js
 all: build
 
 build:
-	uglifyjs2 ./src/lib/stacktrace.js ./src/utils/log/log.js -o ./log.min.js
+	uglifyjs2 ./src/vendor/stacktrace.js ./src/log.js -o ./log.min.js
 
 compile:
 	@find ./src/ -type f -name '*.js' | xargs cat > $(compiled)

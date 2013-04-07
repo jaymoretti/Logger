@@ -19,15 +19,14 @@ function Log(){
 	this.log=function(){
 		if(_debugOn){
 			// get stack and parse it's output
-			var _stack = printStackTrace()[4].toString();
-
+			var _stack = printStackTrace()[5].toString();
 			//if the call doesn't come from a function, it will just give us the file;
 			var _file = "";
-			if(_stack.indexOf("@") < 0)
+			if(_stack.indexOf("at") < 0)
 			{
 				_file = _stack.split(" ")[1].substring(1,_stack.split(" ")[1].length-1);
 			} else {
-				_file = _stack.split("@")[1];
+				_file = _stack.split("at")[1];
 			}
 			
 			// for calls done via console, it won't return a scope.
@@ -42,6 +41,7 @@ function Log(){
 				_fileName = _file.split(".js")[0]+".js";
 				_class = _fileName.split(".js")[0].split("/js/")[1];
 				_line = _file.split(".js")[1].split(":")[1];
+
 			} else {
 				_function = _file.substring(1,_file.length-1);
 				_fileName = "";
