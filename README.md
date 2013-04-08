@@ -1,6 +1,6 @@
 # Logger
 ## console.log++
-_by [Jay Moretti](http://madeinhaus.com)_
+_by [Jay Moretti](http://jaymoretti.com)_
 
 It's often very easy to get lost in a sea of console.log calls. Sometimes you forget to clear them before sending the project to production. Sometimes you need more than a simple output. That's the reason why this console.log extension exists.
 
@@ -34,4 +34,4 @@ Builds are created by uglyfying and merging /src/libs/stacktrace.js and /src/uti
 ### Licensing 
 published under the MIT license
 
-###### This Log polyfil depends on [Javascript Stack Trace](https://github.com/eriwen/javascript-stacktrace) by Eric Wendelin http://eriwen.com/ (2008), Luke Smith http://lucassmith.name/ (2008), Loic Dachary <loic@dachary.org> (2008), Johan Euphrosine <proppy@aminche.com> (2008), Oyvind Sean Kinsey http://kinsey.no/blog (2010), Victor Homyakov <victor-homyakov@users.sourceforge.net> (2010).
+###### This Log polyfil depends on [Javascript Stack Trace](https://github.com/eriwen/javascript-stacktrace) by [Eric Wendelin](http://eriwen.com/) (2008), [Luke Smith](http://lucassmith.name/) (2008), [Loic Dachary](<mailto:loic@dachary.org>) (2008), [Johan Euphrosine](<mailto:proppy@aminche.com>) (2008), [Oyvind Sean Kinsey](http://kinsey.no/blog) (2010), [Victor Homyakov](<mailto:victor-homyakov@users.sourceforge.net>) (2010).
